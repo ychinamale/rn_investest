@@ -5,8 +5,8 @@ import {ErrorBoundary, ErrorFallback} from './widgets';
 
 export default function AppRoot() {
   return (
-    // <ErrorBoundary fallback={<ErrorFallback />}>
-    <NavigationRoot />
-    // </ErrorBoundary>
+    <ErrorBoundary fallback={<ErrorFallback />}>
+      <NavigationRoot />
+    </ErrorBoundary>
   );
 }
