@@ -1,10 +1,11 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
+import {StyledText} from './first-screen.styles';
 
 export function FirstScreen() {
   return (
     <View>
-      <Text>🕺🏾 welcome to the FIRST SCREEN</Text>
+      <StyledText>🕺🏾 welcome to the FIRST SCREEN</StyledText>
     </View>
   );
 }
