@@ -1,6 +1,10 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Text, View} from 'react-native';
 
 export function TextPill({children}) {
-  return <View>{children}</View>;
+  return (
+    <View>
+      <Text>{children}</Text>
+    </View>
+  );
 }
