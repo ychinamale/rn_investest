@@ -21,4 +21,4 @@ export const {reducer} = profileSlice;
 export const {updateName} = profileSlice.actions;
 
 // Selectors
-export const selectName = state => state.name;
+export const selectName = state => state[SLICE_NAME].name;
