@@ -1,2 +1,2 @@
-export {ErrorBoundary} from './ErrorBoundary';
-export {ErrorFallback} from './ErrorFallback';
+export {ErrorBoundary} from './error-boundary.component';
+export {ErrorFallback} from './error-fallback.component';
