@@ -5,7 +5,9 @@ export function useProfile() {
   const dispatch = useDispatch();
   const name = useSelector(selectName);
 
-  const updateName = newName => () => dispatch(_updateName(newName));
+  const updateName = newName => {
+    dispatch(_updateName(newName));
+  };
 
   return {
     name,
