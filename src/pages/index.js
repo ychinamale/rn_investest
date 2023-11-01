@@ -1,1 +1,1 @@
-export {NavigationRoot} from './_navigation-root';
+export {NavigationRoot} from './navigation-root';
