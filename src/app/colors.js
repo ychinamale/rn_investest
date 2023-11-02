@@ -1,3 +1,5 @@
+import {VARIANTS} from './constants';
+
 const BASE_COLORS = {
   WHITE_0: '#ffffff',
   WHITE_1: '#fffff2',
@@ -6,8 +8,8 @@ const BASE_COLORS = {
   BLACK_2: '#232b2b',
   BLACK_3: '#353839',
   BLUE_0: '#70b7ff',
-  BLUE_1: '#5badff',
-  BLUE_2: '#2d89e5',
+  BLUE_1: '#42AAFF',
+  BLUE_2: '#0095FF',
   BLUE_3: '#b2cefc',
   BLUE_4: '#a0b9e2',
   BLUE_5: '#8ea4c9',
@@ -55,34 +57,34 @@ export const colors = {
     border: {
       primary: [undefined, undefined, undefined],
       secondary: [undefined, undefined, undefined],
-      tertiary: [undefined, undefined, undefined],
-      link: [BASE_COLORS.GREY_2, BASE_COLORS.GREY_2, BASE_COLORS.GREY_2],
+      tertiary: [BASE_COLORS.GREY_2, BASE_COLORS.GREY_2, BASE_COLORS.GREY_2],
+      link: [undefined, undefined, undefined],
     },
-    textColor(variant = 'primary') {
+    textColor(variant = VARIANTS.PRIMARY) {
       return this.foreground[variant][STATUS.ENABLED];
     },
-    backgroundColor(variant = 'primary') {
+    backgroundColor(variant = VARIANTS.PRIMARY) {
       return this.background[variant][STATUS.ENABLED];
     },
-    borderColor(variant = 'primary') {
+    borderColor(variant = VARIANTS.PRIMARY) {
       return this.border[variant][STATUS.ENABLED];
     },
-    activeTextColor(variant = 'primary') {
+    activeTextColor(variant = VARIANTS.PRIMARY) {
       return this.foreground[variant][STATUS.ACTIVE];
     },
-    activeBackgroundColor(variant = 'primary') {
+    activeBackgroundColor(variant = VARIANTS.PRIMARY) {
       return this.background[variant][STATUS.ACTIVE];
     },
-    activeBorderColor(variant = 'primary') {
+    activeBorderColor(variant = VARIANTS.PRIMARY) {
       return this.border[variant][STATUS.ACTIVE];
     },
-    disabledTextColor(variant = 'primary') {
+    disabledTextColor(variant = VARIANTS.PRIMARY) {
       return this.foreground[variant][STATUS.DISABLED];
     },
-    disabledBackgroundColor(variant = 'primary') {
+    disabledBackgroundColor(variant = VARIANTS.PRIMARY) {
       return this.background[variant][STATUS.DISABLED];
     },
-    disabledBorderColor(variant = 'primary') {
+    disabledBorderColor(variant = VARIANTS.PRIMARY) {
       return this.border[variant][STATUS.DISABLED];
     },
   },

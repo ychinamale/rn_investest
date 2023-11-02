@@ -1,13 +1,7 @@
 import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 import {colors} from '../../../app/colors';
-
-const VARIANTS = {
-  PRIMARY: 'primary',
-  SECONDARY: 'secondary',
-  TERTIARY: 'tertiary',
-  LINK: 'link',
-};
+import {VARIANTS} from '../../../app/constants';
 
 export function Button(props) {
   const {
