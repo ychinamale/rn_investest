@@ -94,4 +94,8 @@ export const colors = {
   input: {
     borderColor: BASE_COLORS.GREY_0,
   },
+  background: {
+    default: BASE_COLORS.BLACK_1,
+    alternate: BASE_COLORS.WHITE_1,
+  },
 };
