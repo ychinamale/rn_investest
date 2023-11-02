@@ -22,7 +22,11 @@ function OnboardingNavigator() {
         component={SecondScreen}
         options={{headerRight: showNamePill}}
       />
-      <Drawer.Screen name={SCREEN_NAMES.THIRD} component={ThirdScreen} />
+      <Drawer.Screen
+        name={SCREEN_NAMES.THIRD}
+        component={ThirdScreen}
+        options={{headerShown: false}}
+      />
     </Drawer.Navigator>
   );
 }
