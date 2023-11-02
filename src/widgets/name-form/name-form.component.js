@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {StyleSheet, Pressable, View} from 'react-native';
+import {View} from 'react-native';
 import {StyledText, StyledTextInput} from './name-form.styles';
 import {useProfile} from '../../features/profile';
 import {logger} from '../../services/logger';
+import {Button} from '../../shared/components/button';
 
 export function NameForm() {
   const [username, setUsername] = useState();
@@ -46,25 +47,3 @@ export function NameForm() {
     </View>
   );
 }
-
-function Button({onPress, children}) {
-  return (
-    <Pressable
-      onPress={onPress}
-      style={({pressed}) => [
-        {backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'white'},
-        s.wrapperCustom,
-      ]}>
-      <StyledText>{children}</StyledText>
-    </Pressable>
-  );
-}
-
-const s = StyleSheet.create({
-  wrapperCustom: {
-    borderRadius: 8,
-    padding: 6,
-    alignSelf: 'flex-start',
-    marginVertical: 16,
-  },
-});

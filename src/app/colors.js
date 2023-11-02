@@ -91,4 +91,7 @@ export const colors = {
     secondary: BASE_COLORS.BLUE_6,
     tertiary: BASE_COLORS.BLUE_6,
   },
+  input: {
+    borderColor: BASE_COLORS.GREY_0,
+  },
 };
