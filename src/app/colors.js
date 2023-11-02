@@ -52,7 +52,7 @@ export const colors = {
         BASE_COLORS.BLUE_0,
         BASE_COLORS.BLUE_GREY_1,
       ],
-      link: [BASE_COLORS.BLUE_0, BASE_COLORS.BLUE_0, BASE_COLORS.BLUE_GREY_1],
+      link: [BASE_COLORS.WHITE_1, BASE_COLORS.BLUE_0, BASE_COLORS.BLUE_GREY_1],
     },
     border: {
       primary: [undefined, undefined, undefined],
