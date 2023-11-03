@@ -9,6 +9,7 @@ import {
   StyledWrapper,
 } from './third-screen.styles';
 import {Button} from '../../../../shared/components/button';
+import {logger} from '../../../../services/logger';
 
 const showThumbIcon = () => {
   return <FaIcon icon="fa-gem" color="white" size={18} />;
@@ -16,7 +17,7 @@ const showThumbIcon = () => {
 
 export function ThirdScreen() {
   const onSlide = () => {
-    console.log('Slide into your DMS!');
+    logger('onSlide()', 'Slide into your DMS!');
   };
 
   return (
