@@ -1,5 +1,5 @@
 import React from 'react';
-import {TextPill} from '../../shared/components';
+import {TextPill} from '../../shared/components/text-pill';
 import {useProfile} from '../../features/profile';
 
 export function NamePill() {
