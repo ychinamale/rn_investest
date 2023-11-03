@@ -20,6 +20,7 @@ const BASE_COLORS = {
   GREY_0: '#c0c5ce',
   GREY_1: '#65737e',
   GREY_2: '#4f5b66',
+  RED_0: '#ff0000',
 };
 
 const STATUS = {
@@ -92,6 +93,7 @@ export const colors = {
     primary: BASE_COLORS.BLACK_1,
     secondary: BASE_COLORS.BLUE_6,
     tertiary: BASE_COLORS.BLUE_6,
+    error: BASE_COLORS.RED_0,
   },
   input: {
     borderColor: BASE_COLORS.GREY_0,
