@@ -1,4 +1,4 @@
-import {VARIANTS} from './constants';
+import {Variants} from './types';
 
 const BASE_COLORS = {
   WHITE_0: '#ffffff',
@@ -61,31 +61,31 @@ export const colors = {
       tertiary: [BASE_COLORS.GREY_2, BASE_COLORS.GREY_2, BASE_COLORS.GREY_2],
       link: [undefined, undefined, undefined],
     },
-    textColor(variant = VARIANTS.PRIMARY) {
+    textColor(variant = Variants.PRIMARY) {
       return this.foreground[variant][STATUS.ENABLED];
     },
-    backgroundColor(variant = VARIANTS.PRIMARY) {
+    backgroundColor(variant = Variants.PRIMARY) {
       return this.background[variant][STATUS.ENABLED];
     },
-    borderColor(variant = VARIANTS.PRIMARY) {
+    borderColor(variant = Variants.PRIMARY) {
       return this.border[variant][STATUS.ENABLED];
     },
-    activeTextColor(variant = VARIANTS.PRIMARY) {
+    activeTextColor(variant = Variants.PRIMARY) {
       return this.foreground[variant][STATUS.ACTIVE];
     },
-    activeBackgroundColor(variant = VARIANTS.PRIMARY) {
+    activeBackgroundColor(variant = Variants.PRIMARY) {
       return this.background[variant][STATUS.ACTIVE];
     },
-    activeBorderColor(variant = VARIANTS.PRIMARY) {
+    activeBorderColor(variant = Variants.PRIMARY) {
       return this.border[variant][STATUS.ACTIVE];
     },
-    disabledTextColor(variant = VARIANTS.PRIMARY) {
+    disabledTextColor(variant = Variants.PRIMARY) {
       return this.foreground[variant][STATUS.DISABLED];
     },
-    disabledBackgroundColor(variant = VARIANTS.PRIMARY) {
+    disabledBackgroundColor(variant = Variants.PRIMARY) {
       return this.background[variant][STATUS.DISABLED];
     },
-    disabledBorderColor(variant = VARIANTS.PRIMARY) {
+    disabledBorderColor(variant = Variants.PRIMARY) {
       return this.border[variant][STATUS.DISABLED];
     },
   },

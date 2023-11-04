@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import {colors} from '../../../../app/colors';
-import {VARIANTS} from '../../../../app/constants';
+import {Variants} from '../../../../app/types';
 
 export const StyledView = styled.View`
   justify-content: flex-end;
@@ -12,8 +12,8 @@ export const slideButtonStyles = {
   height: 48,
   borderRadius: 8,
   containerStyle: {
-    backgroundColor: colors.button.backgroundColor(VARIANTS.LINK),
-    borderColor: colors.button.borderColor(VARIANTS.TERTIARY),
+    backgroundColor: colors.button.backgroundColor(Variants.LINK),
+    borderColor: colors.button.borderColor(Variants.TERTIARY),
     borderWidth: 1,
   },
   thumbStyle: {

@@ -24,9 +24,10 @@ export default function AppRoot() {
     );
   }
 
-  const canContinue = skipSimulatorCheck ? true : isSimulator ? false : true;
+  const canContinue = skipSimulatorCheck || !isSimulator;
 
   return (
+    // @ts-ignore
     <ErrorBoundary fallback={<ErrorFallback />}>
       <SafeAreaProvider>
         <Provider store={store}>

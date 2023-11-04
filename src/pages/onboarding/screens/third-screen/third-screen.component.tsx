@@ -12,6 +12,7 @@ import {Button} from '../../../../shared/components/button';
 import {logger} from '../../../../services/logger';
 import {SafeView} from '../../../../widgets/safe-view';
 import {colors} from '../../../../app/colors';
+import {Variants} from '../../../../app/types';
 
 const showThumbIcon = () => {
   return <FaIcon icon="fa-gem" color="white" size={18} />;
@@ -33,9 +34,9 @@ export function ThirdScreen() {
     <SafeView viewStyle={viewStyle}>
       <StyledView>
         <View>
-          <Button variant={'link'}>Press me</Button>
-          <Button variant={'secondary'}>Press me</Button>
-          <Button variant={'primary'}>Press me</Button>
+          <Button variant={Variants.LINK}>Press me</Button>
+          <Button variant={Variants.SECONDARY}>Press me</Button>
+          <Button variant={Variants.PRIMARY}>Press me</Button>
           <StyledWrapper>
             <SlideButton
               title="Slide me to continue"

@@ -1,8 +1,15 @@
 import React, {useMemo} from 'react';
-import {Text, View} from 'react-native';
+import {Text, TextStyle, View, ViewStyle} from 'react-native';
 import {colors} from '../../../app/colors';
 
-export function TextPill({children, style = {}, containerStyle = {}}) {
+type TextPillProps = {
+  children: string;
+  style?: TextStyle;
+  containerStyle?: ViewStyle;
+};
+
+export function TextPill(props: TextPillProps) {
+  const {children, style = {}, containerStyle = {}} = props;
   const viewStyle = useMemo(
     () => ({
       borderRadius: 16,

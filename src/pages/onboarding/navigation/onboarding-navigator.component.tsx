@@ -3,27 +3,27 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import {FirstScreen, SecondScreen, ThirdScreen} from '../screens';
 import {NamePill} from '../../../widgets';
 
-const Drawer = createDrawerNavigator();
-
-const SCREEN_NAMES = {
-  FIRST: '1️⃣ First View',
-  SECOND: '2️⃣ Second View',
-  THIRD: '3️⃣ Third View',
+type OnboardingParamList = {
+  'First View': undefined;
+  'Second View': undefined;
+  'Third View': undefined;
 };
+
+const Drawer = createDrawerNavigator<OnboardingParamList>();
 
 const showNamePill = () => <NamePill />;
 
 function OnboardingNavigator() {
   return (
     <Drawer.Navigator>
-      <Drawer.Screen name={SCREEN_NAMES.FIRST} component={FirstScreen} />
+      <Drawer.Screen name="First View" component={FirstScreen} />
       <Drawer.Screen
-        name={SCREEN_NAMES.SECOND}
+        name="Second View"
         component={SecondScreen}
         options={{headerRight: showNamePill}}
       />
       <Drawer.Screen
-        name={SCREEN_NAMES.THIRD}
+        name="Third View"
         component={ThirdScreen}
         options={{headerShown: false}}
       />
@@ -31,4 +31,4 @@ function OnboardingNavigator() {
   );
 }
 
-export {OnboardingNavigator, SCREEN_NAMES};
+export {OnboardingNavigator};

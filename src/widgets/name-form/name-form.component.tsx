@@ -6,11 +6,11 @@ import {logger} from '../../services/logger';
 import {Button} from '../../shared/components/button';
 
 export function NameForm() {
-  const [username, setUsername] = useState();
+  const [username, setUsername] = useState('');
   const [showSuccess, setShowSuccess] = useState(false);
   const {updateName} = useProfile();
 
-  function onChangeText(text) {
+  function onChangeText(text: string) {
     if (showSuccess) {
       setShowSuccess(false);
     }

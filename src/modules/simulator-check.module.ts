@@ -1,11 +1,13 @@
 import {useEffect, useState} from 'react';
 import {NativeModules} from 'react-native';
 import {logger} from '../services/logger';
-const {SimulatorCheckModule} = NativeModules;
+import {
+  SimulatorCheckResponse,
+  SimulatorCheckModuleInterface,
+} from './simulator-check.module.types';
 
-const RESPONSE = {
-  SIMULATOR: 'isSimulator',
-  DEVICE: 'isDevice',
+const {SimulatorCheckModule} = NativeModules as {
+  SimulatorCheckModule: SimulatorCheckModuleInterface;
 };
 
 function useSimulatorCheck() {
@@ -16,7 +18,7 @@ function useSimulatorCheck() {
     async function checkSimulator() {
       try {
         const response = await SimulatorCheckModule.getIsSimulator();
-        if (response === RESPONSE.DEVICE) {
+        if (response === SimulatorCheckResponse.DEVICE) {
           setIsSimulator(false);
         }
         setIsLoading(false);
@@ -28,7 +30,10 @@ function useSimulatorCheck() {
     checkSimulator();
   }, []);
 
+  const something = 0;
+
   return {
+    something,
     isLoading,
     isSimulator,
   };

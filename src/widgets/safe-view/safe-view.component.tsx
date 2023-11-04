@@ -1,8 +1,14 @@
-import React, {useMemo} from 'react';
-import {View} from 'react-native';
+import React, {ReactElement, useMemo} from 'react';
+import {View, ViewStyle} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
-export function SafeView({children, viewStyle}) {
+type SafeViewProps = {
+  children: ReactElement;
+  viewStyle?: ViewStyle;
+};
+
+export function SafeView(props: SafeViewProps) {
+  const {children, viewStyle} = props;
   const insets = useSafeAreaInsets();
   const containerStyle = useMemo(
     () => [

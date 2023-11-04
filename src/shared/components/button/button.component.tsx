@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {ReactElement} from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 import {colors} from '../../../app/colors';
-import {VARIANTS} from '../../../app/constants';
+import {Variants} from '../../../app/types';
 
-export function Button(props) {
+type ButtonProps = {
+  variant?: Variants;
+  disabled?: boolean;
+  children: string | ReactElement;
+  onPress?: () => void;
+};
+
+export function Button(props: ButtonProps) {
   const {
-    variant = VARIANTS.PRIMARY,
+    variant = Variants.PRIMARY,
     disabled = false,
     children,
     onPress,
