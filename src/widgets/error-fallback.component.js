@@ -1,10 +1,16 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
 export function ErrorFallback() {
   return (
-    <View>
+    <View style={s.container}>
       <Text>We had an error 😢</Text>
     </View>
   );
 }
+
+const s = StyleSheet.create({
+  container: {
+    padding: 32,
+  },
+});
