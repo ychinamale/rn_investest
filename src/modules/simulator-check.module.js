@@ -16,7 +16,6 @@ function useSimulatorCheck() {
     async function checkSimulator() {
       try {
         const response = await SimulatorCheckModule.getIsSimulator();
-        logger('checkSimulator', response);
         if (response === RESPONSE.DEVICE) {
           setIsSimulator(false);
         }
