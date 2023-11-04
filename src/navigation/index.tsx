@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {OnboardingNavigator} from './onboarding';
+import {OnboardingNavigator, OnboardingParamList} from './onboarding';
 
 export function NavigationRoot() {
   return (
@@ -8,4 +8,10 @@ export function NavigationRoot() {
       <OnboardingNavigator />
     </NavigationContainer>
   );
+}
+
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends OnboardingParamList {}
+  }
 }
