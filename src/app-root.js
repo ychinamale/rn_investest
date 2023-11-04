@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 import {store} from './app/store';
 import {initFontLibrary} from './app/icon-library';
 import {useSimulatorCheck} from './modules/simulator-check.module';
-import {ActivityIndicator} from 'react-native';
+import {ActivityIndicator, StyleSheet, View} from 'react-native';
 import {Deadzone} from './widgets';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {skipSimulatorCheck} from './app/environment';
@@ -14,10 +14,14 @@ import {skipSimulatorCheck} from './app/environment';
 initFontLibrary();
 
 export default function AppRoot() {
-  const {loading, isSimulator} = useSimulatorCheck();
+  const {isLoading, isSimulator} = useSimulatorCheck();
 
-  if (loading) {
-    return <ActivityIndicator />;
+  if (!skipSimulatorCheck && isLoading) {
+    return (
+      <View style={s.container}>
+        <ActivityIndicator size={'large'} />
+      </View>
+    );
   }
 
   const canContinue = skipSimulatorCheck ? true : isSimulator ? false : true;
@@ -32,3 +36,10 @@ export default function AppRoot() {
     </ErrorBoundary>
   );
 }
+
+const s = StyleSheet.create({
+  container: {
+    height: '100%',
+    justifyContent: 'center',
+  },
+});

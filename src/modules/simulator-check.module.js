@@ -29,7 +29,7 @@ function useSimulatorCheck() {
   }, []);
 
   return {
-    loading: isLoading,
+    isLoading,
     isSimulator,
   };
 }
