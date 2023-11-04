@@ -1,79 +1,86 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+## Setting up the codebase
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+- This codebase requires node v18, so set that up first.
+- Next set up `yarn`.
+- Then follow all the steps outlined in the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.<br>
+- Then clone this repo.
+    
+<br>
 
-## Step 1: Start the Metro Server
+## Starting the app
+- Navigate into the project directory: `cd rn_investest`
+- Then start the metro server by running: `yarn start`
+- After metro is done starting, you can start the Android app by pressing <kbd>a</kbd> or the iOS app by pressing <kbd>i</kbd>. Alternatively you can open a separate terminal and run either `yarn android` or `yarn iOS`.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+<br>
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## How the app is organized
+`./src` - all of the app code lives here
 
-```bash
-# using npm
-npm start
+`./src/app-root.tsx` -> serves as the root of the app
 
-# OR using Yarn
-yarn start
-```
+`./src/app/` -> houses all app-wide concerns such as the store, styles, environmentvariables etc.
 
-## Step 2: Start your Application
+`./src/features` -> this is where you will find the redux slices and related hooksthat control key features in the app.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+`./src/modules` -> access to the native modules created for this app
 
-### For Android
+`./src/navigation` -> houses navigation and associated the screens. Subdirectories arenamed after navigation domains. Since this is a basic app, we have only one domaincalled 'onboarding'. All 3 pages live under this domain. Each domain's directory has thescreen components inside.
 
-```bash
-# using npm
-npm run android
+`./src/services` -> this is where we'd normally find services used often in the app.It currently has a dummy service in there called logger. That doesn't do much.
 
-# OR using Yarn
-yarn android
-```
+`./src/shared` -> this directory has basic UI that are reused in the app
 
-### For iOS
+`./src/widgets` -> this directory has more complex components. These may interact with other UI and can interact with the app state.
 
-```bash
-# using npm
-npm run ios
+<br>
 
-# OR using Yarn
-yarn ios
-```
+## How I addressed each requirement of the exercise:
+    
+`R1. Three views that navigate between each other.`
+    
+    - Used `react navigation`'s `drawerNavigator`.
+    - You can navigate to any screen using left side drawer.
+    - The second screen has buttons that also navigate to the other screens.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+<br>
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+`R2. A view that allows you to capture data and keeps this in state`
+    
+    - The first screen has the input field.
+    - Used redux toolkit to store this data.
+    - The data is then displayed in a text pill at the top right of the second screen
+    
+<br>
 
-## Step 3: Modifying your App
+`R3. A view must contain 4 button variations. One of them must slide`
+    
+    - The third screen has all 4 button variations
 
-Now that you have successfully run the app, let's modify it.
+<br>
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+`R4. A native module that checks if the app is running in a simulator`
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+    - This is done for both Android and iOS using a module aptly named `SimulatorCheckModule`.
+    - Uses promises to communicate from native to JS.
+    - As a bonus, I set up env variables to toggle between an app build that doesn't care if 
+    running a simulator vs an app build that won't allow a simulator. The env files are 
+    named `.env` and `.env.nosim` respectively. To build a no-simulators-allowed app for 
+    Android, run `yarn start:nosim` followed by `yarn android:nosim`. Same goes for iOS.
+    These convenience scripts are listed in `package.json`.
+    - When running the nosim version, a modal displays a notice saying no simulators
+    are allowed. This modal sits on a view that is rendered in place of the regular navigator.
+    This means the user can't access the rest of the app anyway.
 
-## Congratulations! :tada:
+`R5. Static type checking`
 
-You've successfully run and modified your React Native App. :partying_face:
+    - Using TypeScript
 
-### Now what?
+<br>
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+## Comments
 
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- The `SimulatorCheckModule` manually looks for a specific strings in the build. They're unlikely to be exhaustive. One can probably still bypass it with the right configs in a simulator.
+- No tests or anything of the sort because of the app size.
