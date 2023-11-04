@@ -32,7 +32,7 @@ It might not look like it, but my code organization is inspired by [Feature-slic
 
 `./src/app-root.tsx` -> serves as the root of the app
 
-`./src/app/` -> houses all app-wide concerns such as the store, styles, environmentvariables etc.
+`./src/app/` -> houses all app-wide concerns such as the store, styles, environment variables etc.
 
 `./src/features` -> this is where you will find the redux slices and related hooksthat control key features in the app.
 
