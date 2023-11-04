@@ -1,6 +1,6 @@
 The Investest app is a RN CLI app built for a technical assessment. This README will:
 - Guide you through the process of setting up the codebase
-- Guid you on how to start the app
+- Guide you on how to start the app
 - Walk you through the project structure, and lastly
 - Give you a TLDR of how I addressed each challenge in the exercise (complete with **screengrabs**)
 
