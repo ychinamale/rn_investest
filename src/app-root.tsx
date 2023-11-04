@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {NavigationRoot} from './pages';
+import {NavigationRoot} from './navigation';
 import {ErrorBoundary, ErrorFallback} from './widgets';
 import {Provider} from 'react-redux';
 import {store} from './app/store';
