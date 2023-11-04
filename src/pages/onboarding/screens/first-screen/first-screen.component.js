@@ -1,11 +1,11 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
 import {NameForm} from '../../../../widgets';
+import {SafeView} from '../../../../widgets/safe-view';
 
 export function FirstScreen() {
   return (
-    <SafeAreaView>
+    <SafeView>
       <NameForm />
-    </SafeAreaView>
+    </SafeView>
   );
 }

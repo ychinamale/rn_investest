@@ -1,3 +1,3 @@
-export {FirstScreen} from './first';
-export {SecondScreen} from './second';
-export {ThirdScreen} from './third';
+export {FirstScreen} from './first-screen';
+export {SecondScreen} from './second-screen';
+export {ThirdScreen} from './third-screen';

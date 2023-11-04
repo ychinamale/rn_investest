@@ -3,9 +3,8 @@ import {colors} from '../../../../app/colors';
 import {VARIANTS} from '../../../../app/constants';
 
 export const StyledView = styled.View`
-  background-color: ${colors.background.default};
-  flex: 1;
   justify-content: flex-end;
+  height: 100%;
 `;
 
 export const slideButtonStyles = {
