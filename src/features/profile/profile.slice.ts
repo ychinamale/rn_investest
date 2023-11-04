@@ -1,7 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {RootState} from '../../app/store';
 
 export const SLICE_NAME = 'profile';
-
 interface ProfileState {
   name: string;
 }
@@ -22,9 +22,5 @@ export const profileSlice = createSlice({
 
 export const {reducer} = profileSlice;
 export const {updateName} = profileSlice.actions;
-
-interface RootState {
-  [SLICE_NAME]: ProfileState;
-}
 
 export const selectName = (state: RootState) => state[SLICE_NAME].name;
