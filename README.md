@@ -121,9 +121,10 @@ https://github.com/ychinamale/rn_investest/assets/5281496/68952bd5-420b-4c34-b6e
 
 😬 Sorry. No screengrab for the use of typescript 😬
 
-## Comments
+## Limitations
 
 - The `SimulatorCheckModule` manually looks for a specific strings in the build. They're unlikely to be exhaustive. One can probably still bypass it with the right configs in a simulator.
-- No tests or anything of the sort because of the app size.
-- Was going to set up ESLint and maybe Prettier as well, but I opted out of that for some reason.
-- 
+- No tests or anything of the sort
+- Did not set up ESLint and Prettier
+- Did not set up splash screens and app icons
+- Could probably use more emojis in my commit messages 
