@@ -57,7 +57,7 @@ It might not look like it, but my code organization is inspired by [Feature-slic
     - The second screen has buttons that also navigate to the other screens.
 
 
-https://github.com/ychinamale/rn_investest/assets/5281496/fad3f4de-91ca-4185-9f85-6ee4cd6b958a
+![R1 Can navigate between 3 views](https://github.com/ychinamale/rn_investest/assets/5281496/88b43ce2-721d-4899-8547-0562aee1f535)
 
 
 <br>
@@ -71,7 +71,7 @@ https://github.com/ychinamale/rn_investest/assets/5281496/fad3f4de-91ca-4185-9f8
     - The data is then displayed in a text pill at the top right of the second screen
 
 
-https://github.com/ychinamale/rn_investest/assets/5281496/e29a797e-522b-439a-a8e3-fc9474cb6a2c
+![R2 Capture data and show it](https://github.com/ychinamale/rn_investest/assets/5281496/9300e3d6-b968-4a38-9bd5-08d247940d19)
 
 
 <br>
@@ -83,7 +83,7 @@ https://github.com/ychinamale/rn_investest/assets/5281496/e29a797e-522b-439a-a8e
     - The third screen has all 4 button variations
 
 
-https://github.com/ychinamale/rn_investest/assets/5281496/718fc372-1663-4351-996b-7638253ff8af
+![R3 A view with all the buttons](https://github.com/ychinamale/rn_investest/assets/5281496/3d1e3fe4-4491-457d-8244-e6c8db960936)
 
 
 <br>
@@ -104,9 +104,7 @@ https://github.com/ychinamale/rn_investest/assets/5281496/718fc372-1663-4351-996
     This means the user can't access the rest of the app anyway.
 
 
-
-https://github.com/ychinamale/rn_investest/assets/5281496/68952bd5-420b-4c34-b6e9-2ee4fed4f099
-
+![R4 Simulator detection reduced](https://github.com/ychinamale/rn_investest/assets/5281496/68ebc504-0432-4141-82a2-3b4223fea110)
 
 
 <br>
