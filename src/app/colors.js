@@ -90,6 +90,7 @@ export const colors = {
     },
   },
   text: {
+    alternate: BASE_COLORS.WHITE_1,
     primary: BASE_COLORS.BLACK_1,
     secondary: BASE_COLORS.BLUE_6,
     tertiary: BASE_COLORS.BLUE_6,
