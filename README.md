@@ -24,7 +24,7 @@ The Investest app is a RN CLI app built for a technical assessment. This README 
 
 ## How the app is organized
 
-It might not look like it, but my code organization is inspired by [Feature-sliced design architecture](https://feature-sliced.design/docs/get-started) and [Bulletproof react](https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md).
+My code organization is inspired by [Feature-sliced design architecture](https://feature-sliced.design/docs/get-started) and [Bulletproof react](https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md).
 
 <br>
 
