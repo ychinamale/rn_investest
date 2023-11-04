@@ -1,10 +1,11 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {RootState} from '../../app/store';
 
-export const SLICE_NAME = 'profile';
 interface ProfileState {
   name: string;
 }
+
+export const SLICE_NAME = 'profile';
 
 const initialState: ProfileState = {
   name: 'Visitor',
