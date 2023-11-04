@@ -6,6 +6,7 @@
     "android": "ENVFILE=.env react-native run-android",
     "android:nosim": "ENVFILE=.env.nosim react-native run-android",
     "ios": "ENVFILE=.env react-native run-ios",
+    "ios:device:iphone:nosim": "ENVFILE=.env.nosim react-native run-ios --simulator='iPhone 7'",
     "ios:device:iphonex": "ENVFILE=.env react-native run-ios --simulator='iPhone X'",
     "ios:nosim": "ENVFILE=.env.nosim react-native run-ios",
     "lint": "eslint .",
