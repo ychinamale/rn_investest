@@ -18,7 +18,7 @@ The Investest app is a RN CLI app built for a technical assessment. This README 
 ## Starting the app
 - Navigate into the project directory: `cd rn_investest`
 - Then start the metro server by running: `yarn start`
-- After metro is done starting, you can start the Android app by pressing <kbd>a</kbd> or the iOS app by pressing <kbd>i</kbd>. Alternatively you can open a separate terminal and run either `yarn android` or `yarn iOS`.
+- After metro is done starting, you can start the Android app by pressing <kbd>a</kbd> or the iOS app by pressing <kbd>i</kbd>. Alternatively you can open a separate terminal and run either `yarn android` or `yarn ios`.
 
 <br>
 
